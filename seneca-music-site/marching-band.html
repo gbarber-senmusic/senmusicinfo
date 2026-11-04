@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="updates.js"></script>
+<title>Marching Band &amp; Color Guard | Seneca Music</title>
+<meta name="description" content="The Seneca Golden Eagles Marching Band and Color Guard, Tabernacle NJ.">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">S</span>Seneca Music</a>
+<nav class="nav" aria-label="Main">
+<a href="index.html#programs">Programs</a>
+<a href="https://sites.google.com/lrhsd.org/seneca-music/schedulescalendars/full-calendar">Calendar</a>
+<a href="index.html#join">Join Music</a>
+<a href="http://sebpa.org">Boosters</a>
+<a class="contact" href="#contact">Contact</a>
+</nav></div></header>
+<main id="main">
+<section class="page-hero"><div class="wrap">
+<p class="crumbs"><a href="index.html">Home</a> › <a href="index.html#programs">Programs</a> › Marching Band</p>
+<h1>Golden Eagles Marching Band &amp; Color Guard</h1>
+<p id="hero-line"></p>
+</div></section>
+
+<section class="member-bar" aria-label="Member links"><div class="wrap link-grid">
+<a class="link-tile" href="https://sites.google.com/lrhsd.org/seneca-music/schedulescalendars/weekly-itinerary">This week's itinerary</a>
+<a class="link-tile" href="https://sites.google.com/lrhsd.org/seneca-music/schedulescalendars/full-calendar">Full calendar</a>
+<a class="link-tile" href="https://drive.google.com/file/d/13rvMyUf6NlaiKptJ1jYHBOJyxweFMmRv/view?usp=sharing">Printable calendar (PDF)</a>
+<a class="link-tile" href="https://drive.google.com/drive/folders/1maDS8D42iwXE5_AXPfs1xO-_7dXvWlkH?usp=drive_link">Member Google Drive</a>
+</div></section>
+
+<section class="section" id="in-season" hidden><div class="wrap">
+<div class="section-head"><h2>Where we're headed next</h2></div>
+<div class="table-box"><table>
+<thead><tr><th scope="col">Date</th><th scope="col">Event</th><th scope="col">Location</th><th scope="col">Call time</th><th scope="col">Itinerary</th></tr></thead>
+<tbody id="comps"></tbody>
+</table></div>
+</div></section>
+
+<section class="section" id="recruiting" hidden><div class="wrap">
+<div class="section-head"><h2>Mark your summer calendar</h2></div>
+<div class="date-grid" id="summer"></div>
+</div></section>
+
+<section class="section mint"><div class="wrap two-col">
+<div class="stack">
+<h2>Why join marching band?</h2>
+<p>Now in our 22nd season, we're a loud, fun group that brings energy to Seneca Football and has a long record of competitive success in the USBands circuit.</p>
+<p>You don't need experience, and you don't have to give anything up. Our rehearsal schedule works with theatre, athletics and other clubs: 97% of last year's members also did another club, sport or activity at Seneca.</p>
+<div class="progress" id="progress"></div>
+</div>
+<div class="photo">[Photo: band in the stands at a home football game]</div>
+</div></section>
+
+<section class="section"><div class="wrap two-col center">
+<div class="photo">[Photo: color guard mid-toss]</div>
+<div class="stack">
+<h2>Color guard</h2>
+<p>Flags, rifles, sabres and dance, coached by our professional guard staff. No musical background needed. [One or two lines on the winter guard season, if there is one.]</p>
+<div class="btn-row"><a class="btn btn-green" href="mailto:gbarber@lrhsd.org?subject=Color%20guard">Ask about trying out</a></div>
+</div>
+</div></section>
+
+<section class="section" style="padding-top:0"><div class="wrap program-grid">
+<a class="program" href="https://sites.google.com/lrhsd.org/seneca-music/ensembles/marching-band/faqs"><div class="program-body"><h3>FAQs</h3><p>Fees, uniforms, rehearsal times, what to bring</p></div></a>
+<a class="program" href="https://sites.google.com/lrhsd.org/seneca-music/ensembles/marching-band/previous-show-history"><div class="program-body"><h3>Show history</h3><p>Every Golden Eagles show, with videos</p></div></a>
+<a class="program" href="http://sebpa.org"><div class="program-body"><h3>Parent Boosters</h3><p>Volunteering and fundraising at SEBPA.org</p></div></a>
+</div></section>
+</main>
+<footer class="site-footer" id="contact"><div class="wrap">
+<div><h3>Say hi</h3><p>Questions are always welcome. Reach out to Mr. Barber, Band Director.</p><a href="mailto:gbarber@lrhsd.org">gbarber@lrhsd.org</a><p>Seneca High School<br>110 Carranza Rd, Tabernacle, NJ 08088</p></div>
+<div><h3>Follow the band</h3><a href="https://instagram.com/senmarchingband">Instagram @senmarchingband</a><a href="https://www.tiktok.com/@senmarchingband">TikTok @senmarchingband</a></div>
+<div><h3>Families</h3><a href="http://sebpa.org">Parent Boosters at SEBPA.org</a><a href="https://sites.google.com/lrhsd.org/seneca-music/tri-m">Tri-M Music Honor Society</a><a href="https://sites.google.com/lrhsd.org/seneca-music/private-lessons">Private Lessons</a></div>
+</div></footer>
+<script>
+(function(){
+  var S = window.SITE || {};
+  function el(tag, cls, text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=text; return e; }
+  var recruiting = S.season === 'recruiting';
+  var line = document.getElementById('hero-line');
+  if (recruiting) {
+    line.textContent = 'Now recruiting for next season. Everyone is welcome, no experience needed.';
+    document.getElementById('recruiting').hidden = false;
+    var grid = document.getElementById('summer');
+    (S.summerDates || []).forEach(function(d){
+      var c = el('div', 'date-card' + (d.highlight ? ' highlight' : ''));
+      c.appendChild(el('strong', null, d.when)); c.appendChild(el('span', null, d.what)); grid.appendChild(c);
+    });
+  } else {
+    line.appendChild(document.createTextNode('This season\u2019s show: '));
+    line.appendChild(el('strong', null, S.showTitle || ''));
+    document.getElementById('in-season').hidden = false;
+    var body = document.getElementById('comps');
+    (S.competitions || []).forEach(function(c){
+      var tr = el('tr');
+      var d = el('td', null, c.date); d.style.fontWeight = '800'; tr.appendChild(d);
+      tr.appendChild(el('td', null, c.event)); tr.appendChild(el('td', null, c.location)); tr.appendChild(el('td', null, c.callTime));
+      var td = el('td'), a = el('a', null, 'View'); a.href = c.itineraryLink || '#'; td.appendChild(a); tr.appendChild(td);
+      body.appendChild(tr);
+    });
+  }
+  var goal = S.memberGoal || 50, n = Math.min(S.members || 0, goal), p = document.getElementById('progress');
+  var top = el('div','progress-top'); top.appendChild(el('span',null,'Road to ' + goal + ' members')); top.appendChild(el('span',null, n + ' / ' + goal));
+  var bar = el('div','bar'), fill = el('div'); fill.style.width = Math.round(n/goal*100) + '%'; bar.appendChild(fill);
+  bar.setAttribute('role','img'); bar.setAttribute('aria-label', n + ' of ' + goal + ' members');
+  p.appendChild(top); p.appendChild(bar); p.appendChild(el('small',null,'You and two friends could be the difference.'));
+})();
+</script>
+</body>
+</html>
